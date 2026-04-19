@@ -2,42 +2,135 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <title>Portfolio</title>
+    <script src="js/navigation_animation.js" defer></script>
 </head>
 <body>
     <header>
-        <div class="Navigation_tab">
+        <div class="Navigation_tab " id="floatingNav">
             <ul class="Navigation_tab_list">
-                <li>
-                    <button>Home</button>
-                </li>
-                <li>
-                    <button>About</button>
-                </li>
-                <li>
-                    <button>Works</button>
-                </li>
-                <li><button>Skills</button></li>
+                <li><button>Home</button></li>
+                <li><button>About</button></li>
+                <li><button>Works</button></li>
+                <li><button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i> Search</button></li>
             </ul>
         </div>
+        <div class="search-box" id="searchBox">
+            <div class="search-inner">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search..." id="searchInput">
+            </div>
+        </div>
+</div>
     </header>
     <main>
-        <div class="Main_content">
+        <section>
+            <div class="Main_content">
             <div class="Main_content_start">
-                <h1>Hello World</h1>
+                    <h1>Hello World</h1>
+                </div>
+                <div>
+                    <button class="Main_content_BTN"><span class="button_top">Press here</span></button>
+                </div>
             </div>
-            <div>
-                <button class="Main_content_BTN"><span class="button_top">Press here</span></button>
-            </div>
+        </section>
+        <div class="Divider_quote">
+            <p>Curiosity brought you here — let me introduce myself</p>
+            <img src="images/arrow_down.png" class="divider-arrow" alt="Scroll down">
         </div>
-        <div class="Introduction_content">
-            <div>
-                <h1>My name is Renzel Angela Ceredenia</h1>
+    <section class="Introduction_content">
+            <div class="Introduction_card">
+
+                <div class="profile_circle">
+                    <img src="images/temporary_pfp.jpg" alt="pfp phot">
+                </div>
+
+                <p class="intro-label">ABOUT ME</p>
+
+                <h1>Hi, I'm Renzel Angela L. Ceredenia</h1>
+
+                <p class="intro-description">
+                    Computer Engineering student driven by curiosity,
+                    passionate about software development, problem-solving,
+                    and building innovative digital solutions.
+                </p>
+
+                <a href="about.html" class="btn">still curious?</a>
             </div>
-            <div>
-                <p>I am a software developer with a passion for creating innovative solutions. I have experience in various programming languages and frameworks, and I enjoy working on challenging projects that allow me to grow and learn new skills.</p>
-            </div>
+        </section>
+        <div class="Fade_divider_card">
+            <div class="fade_divider"></div>
         </div>
+        <section class="Skills_content">
+            <h2>Skills</h2>
+            <div class="skills_preview">
+                <div class="skill_card">
+                    <div class="skill_info">
+                        <span class="skill_name">HTML</span>
+                        <span class="skill_percent">95%</span>
+                    </div>
+                    <div class="progress_bg">
+                        <div class="progress_bar" style="width: 95%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill_card">
+                    <div class="skill_info">
+                        <span class="skill_name">CSS</span>
+                        <span class="skill_percent">90%</span>
+                    </div>
+                    <div class="progress_bg">
+                        <div class="progress_bar" style="width: 90%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill_card">
+                    <div class="skill_info">
+                        <span class="skill_name">JavaScript</span>
+                        <span class="skill_percent">80%</span>
+                    </div>
+                    <div class="progress_bg">
+                        <div class="progress_bar" style="width: 80%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill_card">
+                    <div class="skill_info">
+                        <span class="skill_name">Python</span>
+                        <span class="skill_percent">75%</span>
+                    </div>
+                    <div class="progress_bg">
+                        <div class="progress_bar" style="width: 75%;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="Works_content">
+            <h2>Featured Works</h2>
+            <div class="works_grid">
+                <div class="work_card">
+                    <h3>Smart Attendance System</h3>
+                    <p>Fingerprint-based attendance system using Arduino and database integration.</p>
+                </div>
+                <div class="work_card">
+                    <h3>Portfolio Website</h3>
+                    <p>Responsive personal portfolio built with HTML, CSS, and JavaScript.</p>
+                </div>
+            </div>
+        </section>
+        <section class="Contact_content">
+            <h2>Contact</h2>
+            <p>Let’s work together or talk about ideas.</p>
+            <div class="contact_info">
+                <p><i class="fa-solid fa-envelope"></i> renzel@email.com</p>
+                <p><i class="fa-brands fa-github"></i> github.com/renzel</p>
+                <p><i class="fa-brands fa-facebook"></i> facebook.com/renzel</p>
+            </div>
+        </section>
+        <footer class="footer">
+            <p>© 2026 Renzel Ceredenia. All rights reserved.</p>
+        </footer>
     </main>
 </body>
 </html>
