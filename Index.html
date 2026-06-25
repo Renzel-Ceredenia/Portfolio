@@ -8,38 +8,65 @@
 </head>
 <body>
     <header>
-        <div class="Navigation_tab " id="floatingNav">
+        <div class="Navigation_tab">
             <ul class="Navigation_tab_list">
-                <li><button>Home</button></li>
-                <li><button>About</button></li>
-                <li><button>Works</button></li>
-                <li><button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i> Search</button></li>
+
+                <li>
+                    <button id="homeBtn">Home</button>
+                </li>
+
+                <li>
+                    <a href="htmls/About.html">
+                        <button>About</button>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="htmls/Works.html">
+                        <button>Works</button>
+                    </a>
+                </li>
+
+                <li>
+                    <button id="searchBtn">
+                        <i class="fa-solid fa-magnifying-glass"></i> Search
+                    </button>
+                </li>
+
             </ul>
         </div>
+
         <div class="search-box" id="searchBox">
             <div class="search-inner">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <input type="text" placeholder="Search..." id="searchInput">
-            </div>
-        </div>
+    </div>
 </div>
     </header>
     <main>
         <section>
             <div class="Main_content">
-            <div class="Main_content_start">
+                <div class="Main_content_start">
                     <h1>Hello World</h1>
                 </div>
+
                 <div>
-                    <button class="Main_content_BTN"><span class="button_top">Press here</span></button>
+                    <button class="Main_content_BTN" id="surpriseBtn">
+                        <span class="button_top">Press here</span>
+                    </button>
                 </div>
+            </div>
+            <div class="pop-container">
+                <img src="images/popAnimation1.png" class="pop-item" id="popAnimation1">
+                <img src="images/popAnimation2.png" class="pop-item" id="popAnimation2">
+                <img src="images/popAnimation3.png" class="pop-item" id="popAnimation3">
             </div>
         </section>
         <div class="Divider_quote">
             <p>Curiosity brought you here — let me introduce myself</p>
             <img src="images/arrow_down.png" class="divider-arrow" alt="Scroll down">
         </div>
-    <section class="Introduction_content">
+        <section class="Introduction_content">
             <div class="Introduction_card">
 
                 <div class="profile_circle">
@@ -56,11 +83,15 @@
                     and building innovative digital solutions.
                 </p>
 
-                <a href="about.html" class="btn">still curious?</a>
+                <a href="htmls/About.html" class="btn">still curious?</a>
             </div>
         </section>
-        <div class="Fade_divider_card">
-            <div class="fade_divider"></div>
+        <div class="wave-divider">
+            <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+                <path fill="#a855f7"
+                    d="M0,128L60,122.7C120,117,240,107,360,122.7C480,139,600,181,720,186.7C840,192,960,160,1080,133.3C1200,107,1320,85,1380,74.7L1440,64L1440,320L0,320Z">
+                </path>
+            </svg>
         </div>
         <section class="Skills_content">
             <h2>Skills</h2>
@@ -106,6 +137,33 @@
                 </div>
             </div>
         </section>
+        <div class="wave-divider2">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+
+                <!-- Back Wave -->
+                <path
+                    fill="#953de9"
+                    d="M0,70
+                    C120,110 240,20 360,70
+                    C480,120 600,30 720,70
+                    C840,110 960,20 1080,70
+                    C1200,120 1320,30 1440,70
+                    V120 H0 Z">
+                </path>
+
+                <!-- Front Wave -->
+                <path
+                    fill="#8726e1"
+                    d="M0,90
+                    C120,40 240,110 360,90
+                    C480,50 600,120 720,90
+                    C840,40 960,110 1080,90
+                    C1200,50 1320,120 1440,90
+                    V120 H0 Z">
+                </path>
+
+            </svg>
+        </div>
         <section class="Works_content">
             <h2>Featured Works</h2>
             <div class="works_grid">
@@ -114,18 +172,49 @@
                     <p>Fingerprint-based attendance system using Arduino and database integration.</p>
                 </div>
                 <div class="work_card">
-                    <h3>Portfolio Website</h3>
-                    <p>Responsive personal portfolio built with HTML, CSS, and JavaScript.</p>
+                    <h3>POS (Point of Sale) Website</h3>
+                    <p>Responsive point of sale website built with HTML, CSS, and JavaScript.</p>
                 </div>
             </div>
         </section>
+        <div class="wave-divider3">
+            <svg viewBox="0 0 1440 140" preserveAspectRatio="none">
+
+                <path
+                    fill="#8726e1"
+                    d="
+                    M0,0
+                    H1440
+                    V50
+
+                    C1360,50 1360,120 1280,120
+                    C1200,120 1200,40 1120,40
+
+                    C1040,40 1040,130 960,130
+                    C880,130 880,60 800,60
+
+                    C720,60 720,120 640,120
+                    C560,120 560,30 480,30
+
+                    C400,30 400,100 320,100
+                    C240,100 240,50 160,50
+
+                    C80,50 80,90 0,90
+
+                    V140
+                    H0
+                    Z">
+                </path>
+
+            </svg>
+        </div>
         <section class="Contact_content">
             <h2>Contact</h2>
             <p>Let’s work together or talk about ideas.</p>
             <div class="contact_info">
-                <p><i class="fa-solid fa-envelope"></i> renzel@email.com</p>
-                <p><i class="fa-brands fa-github"></i> github.com/renzel</p>
-                <p><i class="fa-brands fa-facebook"></i> facebook.com/renzel</p>
+                <p><i class="fa-solid fa-envelope"></i><a href="mailto:renzel@email.com">ceredeniarenzel@email.com</a></p>
+                <p><i class="fa-brands fa-github"></i> <a href="https://github.com/renzel" target="_blank">github.com/renzel</a></p>
+                <p><i class="fa-brands fa-facebook"></i> <a href="https://facebook.com/renzel.ceredenia.5" target="_blank"></a>facebook.com/renzel</a></p>
             </div>
         </section>
         <footer class="footer">

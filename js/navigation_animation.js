@@ -1,35 +1,63 @@
 
-const nav = document.getElementById("floatingNav");
-
-window.addEventListener("scroll", function () {
-
-if (window.scrollY > 300) {
-nav.classList.add("scrolled");
-} else {
-nav.classList.remove("scrolled");
-}
-
-});
-
-
+// Search Functionality
 const searchBtn = document.getElementById("searchBtn");
 const searchBox = document.getElementById("searchBox");
 
-/* safety check (prevents errors) */
 if (searchBtn && searchBox) {
 
-searchBtn.addEventListener("click", function (e) {
-e.stopPropagation(); // prevents accidental closing bugs
-searchBox.classList.toggle("active");
-});
+    searchBtn.addEventListener("click", function (e) {
+        e.stopPropagation();
+        searchBox.classList.toggle("active");
+    });
 
 }
 
-/* optional: close when clicking outside */
 document.addEventListener("click", function (e) {
 
-if (!searchBox.contains(e.target) && !searchBtn.contains(e.target)) {
-searchBox.classList.remove("active");
-}
+    if (!searchBox.contains(e.target) &&
+        !searchBtn.contains(e.target)) {
+
+        searchBox.classList.remove("active");
+    }
 
 });
+
+const surpriseBtn = document.getElementById("surpriseBtn");
+
+if (surpriseBtn) {
+
+    surpriseBtn.addEventListener("click", function () {
+
+        const animations = [
+            "popAnimation1",
+            "popAnimation2",
+            "popAnimation3"
+        ];
+
+        const random =
+            animations[Math.floor(Math.random() * animations.length)];
+
+        const element = document.getElementById(random);
+
+        // Reset animation
+        element.classList.remove(random);
+        void element.offsetWidth;
+
+        // Run animation
+        element.classList.add(random);
+
+    });
+
+}
+
+const homeBtn = document.getElementById("homeBtn");
+
+if(homeBtn){
+
+    homeBtn.addEventListener("click", function(){
+
+        alert("YOU ARE HERE!");
+
+    });
+
+}
